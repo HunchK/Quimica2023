@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quimica.MapaPrincipalController">
+   <children>
+      <TabPane fx:id="MAPAprincipal" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Mapa">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="346.0" fitWidth="575.0" layoutX="26.0" layoutY="3.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../img/mapa.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnUsa" layoutX="129.0" layoutY="63.0" mnemonicParsing="false" onAction="#dUsa" prefHeight="8.0" prefWidth="25.0" text="Usaquen" />
+                        <Button fx:id="BtnSuba" layoutX="90.0" layoutY="137.0" mnemonicParsing="false" onAction="#dtllSuba" prefHeight="8.0" prefWidth="25.0" text="Suba" />
+                        <Button fx:id="btnEng" layoutX="103.0" layoutY="186.0" mnemonicParsing="false" onAction="#dEng" prefHeight="8.0" prefWidth="25.0" text="Engativa" />
+                        <Button fx:id="btnBU" layoutX="205.0" layoutY="111.0" mnemonicParsing="false" onAction="#dBU" prefHeight="8.0" prefWidth="25.0" text="BarriosUni" />
+                        <Button fx:id="btnChap" layoutX="264.0" layoutY="89.0" mnemonicParsing="false" onAction="#dChap" prefHeight="8.0" prefWidth="25.0" text="Chapinero" />
+                        <Button fx:id="btnKen" layoutX="251.0" layoutY="212.0" mnemonicParsing="false" onAction="#dKen" prefHeight="8.0" prefWidth="25.0" text="Kennedy" />
+                        <Button fx:id="btnPA" layoutX="313.0" layoutY="186.0" mnemonicParsing="false" onAction="#dPA" prefHeight="8.0" prefWidth="25.0" text="PuenteAran" />
+                        <Button fx:id="btnBosa" layoutX="326.0" layoutY="305.0" mnemonicParsing="false" onAction="#dBosa" prefHeight="8.0" prefWidth="25.0" text="Bosa" />
+                        <Button fx:id="btnMart" layoutX="290.0" layoutY="124.0" mnemonicParsing="false" onAction="#dMart" prefHeight="0.0" prefWidth="1.0" text="Martires" />
+                        <Button fx:id="btnSF" layoutX="353.0" layoutY="111.0" mnemonicParsing="false" onAction="#dSF" prefHeight="8.0" prefWidth="25.0" text="Santa Fe" />
+                        <Button fx:id="btnTeu" layoutX="218.0" layoutY="150.0" mnemonicParsing="false" onAction="#dTeu" prefHeight="8.0" prefWidth="25.0" text="Teusaquillo" />
+                        <Button fx:id="btnFont" layoutX="192.0" layoutY="199.0" mnemonicParsing="false" onAction="#dFont" prefHeight="8.0" prefWidth="25.0" text="Fontibon" />
+                        <Button fx:id="btnCB" layoutX="379.0" layoutY="258.0" mnemonicParsing="false" onAction="#dCB" prefHeight="8.0" prefWidth="25.0" text="CiudadBO" />
+                        <Button fx:id="btnTun" layoutX="405.0" layoutY="212.0" mnemonicParsing="false" onAction="#dTun" prefHeight="8.0" prefWidth="25.0" text="Tunjuelito" />
+                        <Button fx:id="btnRU" layoutX="392.0" layoutY="163.0" mnemonicParsing="false" onAction="#dRu" prefHeight="8.0" prefWidth="25.0" text="RafUribe" />
+                        <Button fx:id="btnAN" layoutX="353.0" layoutY="163.0" mnemonicParsing="false" onAction="#dAN" prefHeight="8.0" prefWidth="25.0" text="AntonioNar" />
+                        <Button fx:id="btnSC" layoutX="464.0" layoutY="137.0" mnemonicParsing="false" onAction="#dSC" prefHeight="8.0" prefWidth="25.0" text="SanCristo" />
+                        <Button fx:id="btnUsme" layoutX="525.0" layoutY="176.0" mnemonicParsing="false" onAction="#dUsme" prefHeight="8.0" prefWidth="25.0" text="Usme" />
+                        <Button fx:id="btnSp" layoutX="551.0" layoutY="137.0" mnemonicParsing="false" onAction="#dSp" prefHeight="8.0" prefWidth="25.0" text="Sumapaz" />
+                        <Button fx:id="btnCande" layoutX="385.0" layoutY="63.0" mnemonicParsing="false" onAction="#dCande" prefHeight="8.0" prefWidth="25.0" text="Candelaria" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Grafica por semanas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackedBarChart fx:id="tabReg" layoutX="50.0" layoutY="12.0" prefHeight="346.0" prefWidth="444.0" title="Comparativa registro Vs semanas">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </StackedBarChart>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
